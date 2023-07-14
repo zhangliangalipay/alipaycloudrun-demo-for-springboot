@@ -31,6 +31,12 @@ public class HttpTestController {
     }
 
     @ControllerPointCut
+    @GetMapping("/testcloudide")
+    public String testcloudide(){
+        return "testcloudide success";
+    }
+
+    @ControllerPointCut
     @GetMapping("/service")
     public String service() {
         String version = System.getenv("PUB_SERVICE_REVISION") == null ? "springboot-demo" : System.getenv("PUB_SERVICE_REVISION");
